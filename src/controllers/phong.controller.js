@@ -43,9 +43,7 @@ async function createPhongController(req, res) {
 
 async function updatePhongController(req, res) {
     const { id } = req.params;
-    const {
-        maphong, dientich, dongia, loaiphong,
-    } = req.body;
+    const { maphong, dientich, dongia, loaiphong } = req.body;
     const phong = await Phong.findOne({
         where: { id },
     });
@@ -151,7 +149,6 @@ async function getPhongTrongController(req, res) {
             },
         },
     });
-
     return res.json(phongTrongs);
 }
 

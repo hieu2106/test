@@ -15,9 +15,7 @@ async function createNhanVienController(req, res) {
 
 async function updateNhanVienController(req, res) {
     const { id } = req.params;
-    const {
-        name, address, email, dob, phone, gender,
-    } = req.body;
+    const { name, address, email, dob, phone, gender } = req.body;
     const nhanvien = await NhanVien.findOne({
         where: { id },
     });

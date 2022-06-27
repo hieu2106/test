@@ -7,8 +7,6 @@ const khachhangRouter = require('./khachhang.routes');
 const phongRouter = require('./phong.routes');
 const dichvusdRouter = require('./dichvusudung.routes');
 const hddichvuRouter = require('./hddichvu.routes');
-const tiennghiRouter = require('./tiennghi.routes');
-const tiennghiphongRouter = require('./tiennghiphong.routes');
 const hoadonRouter = require('./hoadon.routes');
 
 const router = Router();
@@ -25,8 +23,6 @@ router.use('/khachhang', authMiddleware, khachhangRouter);
 router.use('/phong', authMiddleware, phongRouter);
 router.use('/dichvusd', authMiddleware, dichvusdRouter);
 router.use('/hddichvu', authMiddleware, hddichvuRouter);
-router.use('/tiennghi', authMiddleware, tiennghiRouter);
-router.use('/tiennghiphong', authMiddleware, tiennghiphongRouter);
 router.use('/hoadon', authMiddleware, hoadonRouter);
 
 module.exports = router;

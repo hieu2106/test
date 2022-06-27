@@ -45,7 +45,7 @@ function findHDDichVuByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }
@@ -60,7 +60,7 @@ function deleteHDDichVuByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }

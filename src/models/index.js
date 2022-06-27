@@ -7,8 +7,6 @@ const KhachHang = require('./khachhang.model');
 const HDDichVu = require('./hddichvu.model');
 const DichVuSD = require('./dichvusudung.model');
 const Phong = require('./phong.model');
-const TienNghi = require('./tiennghi.model');
-const TienNghiPhong = require('./tiennghiphong.model');
 const PhieuThue = require('./phieuthue.model');
 const PhieuTra = require('./phieutra.model');
 const PhongThue = require('./phongthue.model');
@@ -68,8 +66,6 @@ module.exports = {
     HDDichVu,
     DichVuSD,
     Phong,
-    TienNghi,
-    TienNghiPhong,
     PhieuThue,
     PhieuTra,
     PhongThue,

@@ -9,15 +9,36 @@ async function getAllController(req, res) {
 }
 
 async function createHDDichVuController(req, res) {
-    const hddichvu = await HDDichVu.create(req.body);
-    return res.json(hddichvu);
+    // const hddichvu = await HDDichVu.create(req.body);
+    // return res.json(hddichvu);
+    const { mahddv } = req.body;
+    const hddichvu = await HDDichVu.findOne({
+        where: {
+            mahddv,
+        },
+    });
+
+    if (hddichvu) {
+        return res
+            .status(ErrorCodes.ERROR_CODE_INVALID_PARAMETER)
+            .send(
+                responseWithError(
+                    ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
+                    'Ma HDDV da ton tai',
+                ),
+            );
+    }
+
+    const hddichvuMoi = await HDDichVu.create({
+        ...req.body,
+        mahddv,
+    });
+    return res.json(hddichvuMoi);
 }
 
 async function updateHDDichVuController(req, res) {
     const { id } = req.params;
-    const {
-        madv, tendv, dongia, mota,
-    } = req.body;
+    const { madv, tendv, dongia, mota } = req.body;
     const hddichvu = await HDDichVu.findOne({
         where: { id },
     });

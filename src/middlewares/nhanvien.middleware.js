@@ -65,7 +65,7 @@ function findNhanvienByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }
@@ -80,7 +80,7 @@ function deleteNhanvienByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }

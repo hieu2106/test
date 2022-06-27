@@ -15,9 +15,7 @@ async function createDichVuSDController(req, res) {
 
 async function updateDichVuSDController(req, res) {
     const { id } = req.params;
-    const {
-        mahddv, madv, dongia, luongsd,
-    } = req.body;
+    const { madv, dongia, luongsd } = req.body;
     const dichvusd = await DichVuSD.findOne({
         where: { id },
     });
@@ -31,7 +29,6 @@ async function updateDichVuSDController(req, res) {
                 ),
             );
     }
-    dichvusd.mahddv = mahddv;
     dichvusd.madv = madv;
     dichvusd.dongia = dongia;
     dichvusd.luongsd = luongsd;

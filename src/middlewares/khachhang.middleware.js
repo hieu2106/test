@@ -53,7 +53,7 @@ function findKhachHangByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }
@@ -68,7 +68,7 @@ function deleteKhachHangByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }

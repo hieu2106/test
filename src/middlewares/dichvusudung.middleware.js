@@ -6,10 +6,8 @@ function validateGetAll(req, res, next) {
 }
 
 function createDichVuSDMiddleware(req, res, next) {
-    const {
-        mahddv, madv, dongia, luongsd,
-    } = req.body;
-    if (!mahddv || !madv || !dongia || !luongsd) {
+    const { madv, dongia, luongsd } = req.body;
+    if (!madv || !dongia || !luongsd) {
         return res
             .status(ErrorCodes.ERROR_CODE_INVALID_PARAMETER)
             .send(
@@ -24,10 +22,8 @@ function createDichVuSDMiddleware(req, res, next) {
 
 function updateDichVuSDMiddleware(req, res, next) {
     const { id } = req.params;
-    const {
-        mahddv, madv, dongia, luongsd,
-    } = req.body;
-    if (!id || !mahddv || !madv || !dongia || !luongsd) {
+    const { madv, dongia, luongsd } = req.body;
+    if (!id || !madv || !dongia || !luongsd) {
         return res
             .status(ErrorCodes.ERROR_CODE_INVALID_PARAMETER)
             .send(
@@ -49,7 +45,7 @@ function findDichVuSDByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }
@@ -64,7 +60,7 @@ function deleteDichVuSDByIdMiddleware(req, res, next) {
             .send(
                 responseWithError(
                     ErrorCodes.ERROR_CODE_INVALID_PARAMETER,
-                    'truyen cmm id vao day',
+                    'truyen id vao day',
                 ),
             );
     }

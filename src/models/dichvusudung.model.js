@@ -9,10 +9,6 @@ const DichVuSD = sequelize.define(
             primaryKey: true,
             type: DataTypes.INTEGER,
         },
-        mahddv: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         madv: {
             type: DataTypes.STRING,
             allowNull: false,
