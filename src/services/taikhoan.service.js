@@ -14,9 +14,7 @@ function createRefreshToken(payload) {
 }
 
 function decodeToken(token, secret = process.env.JWT_AT_SECRET) {
-    return jwt.verify(token, secret, {
-        ignoreExpiration: false,
-    });
+    return jwt.verify(token, secret);
 }
 
 function hashPassword(plainPassword) {
